@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using mvcStudent.Models;
+
 
 namespace mvcStudent
 {
@@ -21,6 +24,8 @@ namespace mvcStudent
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<StudentContext>(options =>
+                 options.UseSqlite("Data Source=mvcStudent.db"));
             services.AddMvc();
         }
 
