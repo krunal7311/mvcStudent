@@ -18,6 +18,6 @@ namespace mvcStudent.Models
         public DateTime EnrollmentDate { get; set; }
 
         //Navigation property to hols related entities.
-        public virtual ICollection<Enrollment> Enrollments { get; set; }
+        public virtual ICollection<Enrollment> Enrollment { get; set; }
     }
 }

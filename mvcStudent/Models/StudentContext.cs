@@ -1,5 +1,8 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
+using mvcStudent.Models;
+using System.Data;
+
 
 namespace mvcStudent.Models
 {

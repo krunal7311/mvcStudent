@@ -72,12 +72,12 @@ namespace mvcStudent.Migrations
             modelBuilder.Entity("mvcStudent.Models.Enrollment", b =>
                 {
                     b.HasOne("mvcStudent.Models.Course", "Course")
-                        .WithMany("Enrollments")
+                        .WithMany("Enrollment")
                         .HasForeignKey("CourseID")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("mvcStudent.Models.Student", "Student")
-                        .WithMany("Enrollments")
+                        .WithMany("Enrollment")
                         .HasForeignKey("StudentID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
