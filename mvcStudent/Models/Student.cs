@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+namespace mvcStudent.Models
+{
+    public class Student
+    {
+
+        //EF sets ID as the primary key
+        public int ID { get; set; }
+        public string LastName { get; set; }
+        public string FirstMidName { get; set; }
+        public DateTime EnrollmentDate { get; set; }
+
+        //Navigation property to hols related entities.
+        public virtual ICollection<Enrollment> Enrollments { get; set; }
+    }
+}
