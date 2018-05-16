@@ -10,7 +10,7 @@ namespace mvcStudent.Models
         {
         }
 
-        public DbSet<mvcStudent.Models.Student> Movie { get; set; }
+        public DbSet<mvcStudent.Models.Student> Student { get; set; }
         public DbSet<mvcStudent.Models.Course> Course { get; set; }
         public DbSet<mvcStudent.Models.Enrollment> Enrollment { get; set; }
 
