@@ -13,9 +13,8 @@ namespace mvcStudent.Models
         public string LastName { get; set; }
         public string FirstMidName { get; set; }
 
-        [Display(Name = "Release Date")]
+        [Display(Name = "Enrollment Date")]
         [DataType(DataType.Date)]
-
         public DateTime EnrollmentDate { get; set; }
 
         //Navigation property to hols related entities.

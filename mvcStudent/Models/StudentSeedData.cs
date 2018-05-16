@@ -14,14 +14,14 @@ namespace mvcStudent.Models
             using (var context = new StudentContext(
                 serviceProvider.GetRequiredService<DbContextOptions<StudentContext>>()))
             {
-                // Look for any Students.
-                if (context.Student.Any())
+                // Look for any movies.
+                if (context.Movie.Any())
                 {
                     return;   // DB has been seeded
                 }
 
-                context.Student.AddRange(
-            new Student { FirstMidName = "Carson", LastName = "Alexander", EnrollmentDate = DateTime.Parse("2005-09-01") },
+                context.Movie.AddRange(
+                    new Student { FirstMidName = "Carson", LastName = "Alexander", EnrollmentDate = DateTime.Parse("2005-09-01") },
             new Student { FirstMidName = "Meredith", LastName = "Alonso", EnrollmentDate = DateTime.Parse("2002-09-01") },
             new Student { FirstMidName = "Arturo", LastName = "Anand", EnrollmentDate = DateTime.Parse("2003-09-01") },
             new Student { FirstMidName = "Gytis", LastName = "Barzdukas", EnrollmentDate = DateTime.Parse("2002-09-01") },
@@ -33,7 +33,7 @@ namespace mvcStudent.Models
                 context.SaveChanges();
             }
         }
-    }
-}
+
+
     }
 }
